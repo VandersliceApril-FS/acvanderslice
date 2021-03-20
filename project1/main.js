@@ -10,7 +10,7 @@ let newParticipant;
 let numParticipants;
 
 numParticipants = parseInt(prompt('How many people are participating in the gift exchange? (must be positive number)'));
-while(numParticipants % 2 != 0) {
+while(numParticipants % 2 !== 0) {
     alert('Number of participants must be positive.');
     numParticipants = parseInt(prompt('How many people are participating in the gift exchange?'));
 }
@@ -27,4 +27,11 @@ for(let i = 0; i<numParticipants; i++) {
     allParticipantsList.push(newParticipant);
 }
 
-console.log(allParticipantsList);
+function displayGroup(number, list){
+    console.log(`You have ${number} people participating in your gift exchange:`)
+    for(let i = 0; i < list.length; i++) {
+        console.log(`${list[i]}`);
+    }
+}
+
+displayGroup(numParticipants, allParticipantsList);
