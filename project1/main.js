@@ -27,11 +27,47 @@ for(let i = 0; i<numParticipants; i++) {
     allParticipantsList.push(newParticipant);
 }
 
-function displayGroup(number, list){
-    console.log(`You have ${number} people participating in your gift exchange:`)
+function displayGroup(list){
+    console.log('people participating in your gift exchange:')
     for(let i = 0; i < list.length; i++) {
         console.log(`${list[i]}`);
     }
 }
+displayGroup(allParticipantsList);
 
-displayGroup(numParticipants, allParticipantsList);
+// shuffle the participants
+function shuffleList(list){
+
+    for(let i = list.length-1; i > 0; i--){
+        const j = Math.floor(Math.random() * i)
+        const temp = list[i]
+        list[i] = list[j];
+        list[j] = temp;
+    }
+    return list;
+}
+console.log(shuffleList(allParticipantsList));
+
+function pairParticipants(shuffled){
+    let pairs = [];
+    shuffled.map((participant, i) => {
+        let indexToMatchWith = i + 1;
+        if (indexToMatchWith >= shuffled.length) {
+            indexToMatchWith = 0;
+        }
+        pairs.push(`${shuffled[i]} buys for ${shuffled[indexToMatchWith]}.`);
+    });
+    return pairs;
+}
+displayGroup(pairParticipants(shuffleList(allParticipantsList)));
+
+
+
+
+
+
+
+
+
+
+
