@@ -1,43 +1,15 @@
-// user can:
-// enters names of people participating in gift exchange
-// click a button called "Draw Names"
-// See the list of names shuffled and matched with one other names
-// clear the list and start over
-// reshuffle the list by clicking "Draw Names"
-
-const allParticipantsList = [];
-let newParticipant;
-let numParticipants;
-
-numParticipants = parseInt(prompt('How many people are participating in the gift exchange? (must be positive number)'));
-while(numParticipants % 2 !== 0) {
-    alert('Number of participants must be positive.');
-    numParticipants = parseInt(prompt('How many people are participating in the gift exchange?'));
+// FUNCTIONS:
+function toTitleCase(properNoun) {
+    let firstChar = properNoun.charAt(0);
+    return firstChar.toUpperCase() + properNoun.slice(1);
 }
-
-while(isNaN(numParticipants) || numParticipants === '') {
-    numParticipants = prompt('Please enter a positive number. How many people are participating in the gift exchange?');
-}
-
-for(let i = 0; i<numParticipants; i++) {
-    newParticipant = prompt('Enter participant\'s full name');
-    while(newParticipant === "") {
-        newParticipant = prompt('Entry cannot be blank. Enter participant\'s full name');
-    }
-    allParticipantsList.push(newParticipant);
-}
-
-function displayGroup(list){
-    console.log('people participating in your gift exchange:')
+function displayList(list, message){
+    console.log(`\r\n${message.toUpperCase()}\r\n--------------------------------`)
     for(let i = 0; i < list.length; i++) {
         console.log(`${list[i]}`);
     }
 }
-displayGroup(allParticipantsList);
-
-// shuffle the participants
 function shuffleList(list){
-
     for(let i = list.length-1; i > 0; i--){
         const j = Math.floor(Math.random() * i)
         const temp = list[i]
@@ -46,8 +18,6 @@ function shuffleList(list){
     }
     return list;
 }
-console.log(shuffleList(allParticipantsList));
-
 function pairParticipants(shuffled){
     let pairs = [];
     shuffled.map((participant, i) => {
@@ -57,9 +27,48 @@ function pairParticipants(shuffled){
         }
         pairs.push(`${shuffled[i]} buys for ${shuffled[indexToMatchWith]}.`);
     });
-    return pairs;
+    // shuffle the list again so it looks more random.
+    return shuffleList(pairs);
 }
-displayGroup(pairParticipants(shuffleList(allParticipantsList)));
+
+// Explain app to the user
+console.info('SECRET SANTA APP');
+console.info('===========================================================')
+console.info('Use this app to virtually draw names for your gift exchange.')
+
+// Alert also explains app to user in case JavaScript console isn't already open in the browser and above info cannot be seen
+alert('Secret Santa App\r\n' +
+    '==================================================\r\n' +
+    'Use this app to virtually draw names for your gift exchange.')
+
+const allParticipantsList = [];
+let newParticipant;
+let numParticipants;
+
+// enter names of people participating in gift exchange
+numParticipants = parseInt(prompt('How many people are participating in the gift exchange? (must be an even number)'));
+while(numParticipants % 2 !== 0) {
+    alert('Entry must be an even number.');
+    numParticipants = parseInt(prompt('How many people are participating in the gift exchange?'));
+}
+// validate entry wasn't left blank or wasn't a number
+while(isNaN(numParticipants) || numParticipants === '') {
+    numParticipants = prompt('Please enter an even number. How many people are participating in the gift exchange?');
+}
+
+for(let i = 0; i<numParticipants; i++) {
+    newParticipant = prompt(`Enter full name for participant ${i+1}:`);
+    while(newParticipant === "") {
+        newParticipant = prompt(`Entry cannot be blank. Enter full name for participant ${i+1}: `);
+    }
+    newParticipant = toTitleCase(newParticipant);
+    allParticipantsList.push(newParticipant);
+}
+
+displayList(allParticipantsList, 'Participants:');
+
+// grab the participant list, shuffle it, pair participants, display pairs to the console.
+displayList(pairParticipants(shuffleList(allParticipantsList)), 'Matches:');
 
 
 
