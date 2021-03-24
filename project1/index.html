@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Secret Santa App</title>
-    <script type="text/javascript" src="main.js"></script>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap" rel="stylesheet">
@@ -11,6 +11,36 @@
 <body>
 <h1>Secret<br>Santa.</h1>
 
+<!---
+JavaScript portion temporarily placed on top for easy access during build/testing.
+Will move it to it a permanent place when everything works.
+ --->
+<div class="wrapper">
+    <h3>Try Out Virtual Name Drawing</h3>
+    <section class="addNamesForm">
+
+        <h4 class="sectionHeading">Add Participants</h4>
+        <input
+                class="participantNameInput"
+                type="text"
+                placeholder="Type participants full name"
+                name="fullName"
+        >
+        <button
+                class="submitParticipantButton"
+                onclick="addParticipant()"
+        >Add</button>
+
+    </section>
+    <section class="participantList">
+        <h4 class="sectionHeading">All Participants</h4>
+        <ol id="allParticipants">
+            <!--- write function to grab the input value from form and create a list item: document.createElement() --->
+        </ol>
+
+    </section>
+
+</div>
 <section class="intro">
     <div class="introText">
         <h2>Virtually draw names for your gift exchange.</h2>
@@ -40,6 +70,9 @@
     </div>
     <img class="signUpImage" src="images/mobile_multiview.jpg" alt="Mobile app screens" />
 </section>
+
+
+<script type="text/javascript" src="main.js"></script>
 
 </body>
 </html>
