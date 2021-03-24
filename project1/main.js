@@ -1,5 +1,6 @@
 // keep a local list of participants to manipulate
 let listOfParticipants = [];
+let pairs = [];
 
 function addParticipant() {
     // create a new list item element
@@ -16,6 +17,7 @@ function addParticipant() {
     // insert new list item element into all participants list
     let allParticipants = document.getElementById('allParticipants');
     allParticipants.appendChild(newListItem);
+    // clear the input field so it's ready for a new entry
     document.querySelector('.participantNameInput').value = "";
 }
 
@@ -24,18 +26,19 @@ function addParticipant() {
 // const addNameButton = document.getElementsByClassName('submitParticipantButton').onclick = addParticipant();
 
 // function to take the list and shuffle the names
-function shuffleList(){
-    for(let i = listOfParticipants.length-1; i > 0; i--){
+function shuffleList(list){
+    for(let i = list.length-1; i > 0; i--){
         const j = Math.floor(Math.random() * i)
-        const temp = listOfParticipants[i]
-        listOfParticipants[i] = listOfParticipants[j];
-        listOfParticipants[j] = temp;
+        const temp = list[i]
+        list[i] = list[j];
+        list[j] = temp;
     }
-    return listOfParticipants;
+    return list;
 }
 
-function pairParticipants(shuffled){
-    let pairs = [];
+function pairParticipants(){
+    let shuffled = [];
+    shuffled = shuffleList(listOfParticipants);
     shuffled.map((participant, i) => {
         let indexToMatchWith = i + 1;
         if (indexToMatchWith >= shuffled.length) {
@@ -44,15 +47,30 @@ function pairParticipants(shuffled){
         pairs.push(`${shuffled[i]} buys for ${shuffled[indexToMatchWith]}.`);
     });
     // shuffle the list again so it looks more random.
-    return shuffleList(pairs);
+    shuffleList(pairs);
+    displayMatchList();
 }
 
-const drawButton = document.getElementById('drawNamesButton').onclick = shuffleList;
-console.log(shuffleList());
+const drawButton = document.getElementById('drawNamesButton').onclick = pairParticipants;
+
+function displayMatchList() {
+    // loop through the matches list
+    pairs.forEach((match => {
+        // create an li
+        let newListItem = document.createElement("LI");
+        // grab item from the list and create a text node
+        let itemValue = document.createTextNode(match);
+        // add the text node to the list item element
+        newListItem.appendChild(itemValue);
+        // select the matches list and add the list item element to the html list
+        document.getElementById('matchesList').appendChild(newListItem);
+    }))
 
 
 
 
+
+}
 
 
 
