@@ -6,7 +6,7 @@ function addParticipant() {
     // create a new list item element
     let newListItem = document.createElement("LI");
     // grab input value
-    let currentInputValue = document.querySelector('.participantNameInput').value;
+    let currentInputValue = document.querySelector('#participantNameInputBox').value;
 
     // add this name to an array for quick access when creating matches
     listOfParticipants.push(currentInputValue);
@@ -15,10 +15,10 @@ function addParticipant() {
     newListItem.appendChild(t);
 
     // insert new list item element into all participants list
-    let allParticipants = document.getElementById('allParticipants');
+    let allParticipants = document.getElementById('participantsList');
     allParticipants.appendChild(newListItem);
     // clear the input field so it's ready for a new entry
-    document.querySelector('.participantNameInput').value = "";
+    document.querySelector('#participantNameInputBox').value = "";
 }
 
 // when I use this line, an empty list item is already visible on the page and each name is added after it.

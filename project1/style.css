@@ -3,19 +3,25 @@
     box-sizing: border-box;
     grid-template-columns: inherit;
 }
-
+/* Wraps all of the main content to keep it contained away from the edges of the screen */
 .wrapper {
-    max-width: 100%;
-    margin: 50px;
-}
-
-.info {
     max-width: 90%;
     margin: auto;
+}
+
+img {
+    max-width: 80%;
+    margin: auto;
+}
+
+/* includes the first two rows of content explaining what the app is and what it does */
+.infoSection {
+    max-width: 100%;
+    margin-bottom: 10px;
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: 1fr 1fr;
     /*grid-gap: 2px;*/
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: minmax(50px, auto);
 }
 
 #summaryText {
@@ -27,36 +33,66 @@
 #summaryImage {
     grid-column: 2 / 2;
     grid-row: 1;
-    max-width: 80%;
 }
 
-
 #signUpText {
+    margin: inherit;
     grid-column: 2 / 2;
     grid-row: 2;
-    width: 60%;
+    width: 80%;
+    padding-left: 10px;
     box-sizing: border-box;
 }
 
 #signUpImage {
     grid-column: 1 / 2;
     grid-row: 2;
-    max-width: 80%;
 }
 
-.formWrapper {
-    max-width: 75%;
+#appTrial {
+    box-sizing: border-box;
+    margin: 60px;
+    padding-left: 60px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
     grid-auto-rows: minmax(100px, auto);
 }
+#appTrial .sectionHeading {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 50px;
+}
 
+#inputSection {
+    grid-column: 1 / 4;
+    grid-row: 2;
+}
+
+#participantNameInputBox {
+    width: 90%;
+    padding: 15px;
+    font-size: 18px;
+}
+
+#participantsSection {
+    grid-column: 1 / 3;
+    grid-row: 3 / 6;
+}
+
+#matchesSection {
+    grid-column: 3 / 5;
+    grid-row: 3 / 6;
+}
 
 h1 {
     text-align: center;
     margin-bottom: 60px;
 }
+
+
+
+
 
 
 

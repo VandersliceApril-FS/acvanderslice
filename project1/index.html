@@ -10,21 +10,21 @@
 </head>
 <body>
 <h1>Secret<br>Santa.</h1>
-
 <div class="wrapper">
-    <section class="info">
+    <section class="infoSection">
         <div id="summaryText">
-            <h2>Virtually draw names for your gift exchange.</h2>
+            <h2 id="tagLine">Virtually draw names for your gift exchange.</h2>
             <p>Available on Android and iOS</p>
             <span>
-                <button>Play Store</button>
-                <button>App Store</button>
+                <button class="storeButton">Play Store</button>
+                <button class="storeButton">App Store</button>
             </span>
         </div>
         <img id="summaryImage" src="images/header.jpg" alt="app photos" />
     </section>
-    <section class="info">
+    <section class="infoSection">
         <div id="signUpText">
+            <h3 class="sectionHeading">How it works</h3>
             <p>
                 As a host, it's easy to create your party: add the names, click <strong>Draw</strong>,
                 then send out the party link. All of the Santas will remain secret!
@@ -41,43 +41,44 @@
     </section>
 
 
+    <div id="appTrial">
+        <h3 class="sectionHeading">Try it out</h3>
+        <section id="inputSection">
+            <h4 class="subSectionHeading">Add Names</h4>
+            <input
+                    id="participantNameInputBox"
+                    type="text"
+                    placeholder="Type participants full name"
+                    name="fullName"
+            >
+            <button
+                    class="button"
+                    id="submitParticipantButton"
+                    onclick="addParticipant()">
+                Add</button>
 
-    <h3>Try Out Virtual Name Drawing</h3>
-    <section class="addNamesForm">
+        </section>
+        <section id="participantsSection">
+            <h4 class="subSectionHeading">All Participants</h4>
+            <ol id="participantsList">
+                <!--- write function to grab the input value from form and create a list item: document.createElement() --->
+            </ol>
 
-        <h4 class="sectionHeading">Add Participants</h4>
-        <input
-                class="participantNameInputBox"
-                type="text"
-                placeholder="Type participants full name"
-                name="fullName"
-        >
-        <button
-                class="submitParticipantButton"
-                onclick="addParticipant()">
-            Add</button>
+            <button
+                    class="button"
+                    id="drawNamesButton"
+            >
+                Draw Names</button>
 
-    </section>
-    <section class="participantList">
-        <h4 class="sectionHeading">All Participants</h4>
-        <ol id="allParticipants">
-            <!--- write function to grab the input value from form and create a list item: document.createElement() --->
-        </ol>
+        </section>
 
-        <button
-                class="button"
-                id="drawNamesButton"
-        >
-            Draw Names</button>
+        <section id="matchesSection">
+            <h4 class="subSectionHeading">Matches</h4>
+            <ul id="matchesList">
 
-    </section>
-
-    <section class="matchesSection">
-        <ul id="matchesList">
-
-        </ul>
-    </section>
-
+            </ul>
+        </section>
+    </div>
 </div>
 <script type="text/javascript" src="main.js"></script>
 
