@@ -37,20 +37,27 @@ function shuffleList(list){
 }
 
 function pairParticipants(){
-    // reset pairs to an empty array to avoid duplicates in case user wants to rematch participants
-    pairs = [];
-    let shuffled = [];
-    shuffled = shuffleList(listOfParticipants);
-    shuffled.map((participant, i) => {
-        let indexToMatchWith = i + 1;
-        if (indexToMatchWith >= shuffled.length) {
-            indexToMatchWith = 0;
-        }
-        pairs.push(`${shuffled[i]} buys for ${shuffled[indexToMatchWith]}.`);
-    });
-    // shuffle the list again so it looks more random.
-    shuffleList(pairs);
-    displayMatchList();
+    // check to make sure there's an even number of participants before trying to pair!
+    if (listOfParticipants.length %2 === 0) {
+        // reset pairs to an empty array to avoid duplicates in case user wants to rematch participants
+        pairs = [];
+        let shuffled = [];
+        shuffled = shuffleList(listOfParticipants);
+        shuffled.map((participant, i) => {
+            let indexToMatchWith = i + 1;
+            if (indexToMatchWith >= shuffled.length) {
+                indexToMatchWith = 0;
+            }
+            pairs.push(`${shuffled[i]} buys for ${shuffled[indexToMatchWith]}.`);
+        });
+        // shuffle the list again so it looks more random.
+        shuffleList(pairs);
+        displayMatchList();
+    } else {
+        alert('Number of participants must be even! Try adding or removing a participant.')
+    }
+
+
 }
 
 const drawButton = document.getElementById('drawNamesButton').onclick = pairParticipants;
