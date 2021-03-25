@@ -5,6 +5,7 @@ let pairs = [];
 function addParticipant() {
     // create a new list item element
     let newListItem = document.createElement("LI");
+    newListItem.classList.add("participantName");
     // grab input value
     let currentInputValue = document.querySelector('#participantNameInputBox').value;
 
