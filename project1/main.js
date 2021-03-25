@@ -37,6 +37,8 @@ function shuffleList(list){
 }
 
 function pairParticipants(){
+    // reset pairs to an empty array to avoid duplicates in case user wants to rematch participants
+    pairs = [];
     let shuffled = [];
     shuffled = shuffleList(listOfParticipants);
     shuffled.map((participant, i) => {
@@ -54,8 +56,14 @@ function pairParticipants(){
 const drawButton = document.getElementById('drawNamesButton').onclick = pairParticipants;
 
 function displayMatchList() {
+    // clear the list displayed in the ui in case the user is trying to rematch
+    clearMatchesList();
+    // creating a copy of the list so that if the user wants to rematch, they can
+    // without duplicate matches
+    let matches = [];
+    matches = pairs;
     // loop through the matches list
-    pairs.forEach((match => {
+    matches.forEach((match => {
         // create an li
         let newListItem = document.createElement("LI");
         // grab item from the list and create a text node
@@ -64,12 +72,14 @@ function displayMatchList() {
         newListItem.appendChild(itemValue);
         // select the matches list and add the list item element to the html list
         document.getElementById('matchesList').appendChild(newListItem);
-    }))
+    }));
+}
 
-
-
-
-
+function clearMatchesList() {
+    let list = document.getElementById('matchesList');
+    while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+    }
 }
 
 
