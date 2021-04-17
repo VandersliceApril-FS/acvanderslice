@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=M+PLUS+Rounded+1c:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Fredoka+One&display=swap');
 
 /* CSS Reset =========================== */
 html, body, nav, section, footer, article, 
@@ -20,13 +20,15 @@ img {
 
 /* Typography Defaults ================= */
 body {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 	background-color: #f5f5f5;
 }
 
-header > nav li {
+#topBar > nav li {
 	font-size: 1.2rem;
+	font-weight: 700;
 }
+
 
 h1 {
 	font-family: 'Fredoka One', cursive;
@@ -49,11 +51,11 @@ h2 {
 }
 
 h3 {
-	font-size: 1.8rem;
+	font-size: 1.2rem;
 }
 
 h4 {
-	font-size: 1.3rem;
+	font-size: 1rem;
 	font-weight: 600;
 }
 
@@ -68,33 +70,42 @@ p {
 
 header {
 	min-width: 48rem;
-	min-height: 38rem;
+	min-height: 34rem;
 	background-image: url("../images/heroImage.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: relative;
-	opacity: 0.8;
-	
+	opacity: 0.9;
 }
 
-header > nav li, header > nav, #logo img, h1{
+#topBar {
+	height: 7.7rem;
+	padding: 1.5rem 1rem;
+	min-width: 100%;
+}
+
+#topBar nav li, #topBar h1, #topBar img, #topBar nav {
 	display: inline-block;
-	vertical-align: baseline;
-}
-
-#logo img {
 	max-height: 2.2rem;
-	padding-top: .25rem;
-	
 }
 
-header nav {
-	height: 7.8rem;
+#topBar img {
+	vertical-align: bottom;
 }
+
+#topBar nav {
+	margin-left: 5rem;
+}
+
+
+#topBar nav ul li {
+	padding: 1.5rem;
+}
+
 
 
 #pageTitle {
-	margin-top: 8rem;
+	margin-top: 6rem;
 	border: 5px solid yellow;
 	text-align: center;
 	width: 60%;
@@ -139,18 +150,34 @@ body > nav a {
 
 
 /* Programs section =================== */
+main > section {
+	margin: 3rem 0;
+}
+
 article, aside {
 	margin: 2rem;
 	display: block;
 	background-color: white;
-	border-radius: 10px;
-	width: 25rem;
-	height: 30rem;
+	border-radius: 5px;
+	width: 20rem;
+	height: 24rem;
+}
+
+article h3 {
+	padding: 1rem .5rem .5rem .5rem;
+}
+
+article p:nth-of-type(1) {
+	padding: 0 .5rem .7rem .5rem;
+}
+
+article p:nth-of-type(2) {
+	padding: .5rem;
 }
 
 article img {
 	max-width: 100%;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 

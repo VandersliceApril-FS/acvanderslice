@@ -7,20 +7,22 @@
 </head>
 <body>
     <header>
-        <div id="logo">
+        <div id="topBar">
+            
             <img src="images/logo.png" alt="company logo">
             <h1>babyland</h1>       
+            
+            <nav>
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#whatWeOffer">Pages</a></li>
+                    <li><a href="#callToAction">Contact Us</a></li>
+                    <li><a href="#more">More</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#top">Home</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#whatWeOffer">Pages</a></li>
-                <li><a href="#callToAction">Contact Us</a></li>
-                <li><a href="#more">More</a></li>
-            </ul>
-        </nav>
         <div id="pageTitle">
             <h2>Our Programs</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta esse dolor aspernatur expedita ipsa facere, fugit unde quo?</p>
@@ -28,8 +30,15 @@
         
     </header>
     <main>
-        
         <section>
+            <aside>
+                <h3>Register for a program</h3>
+                <label>Full name: <input name="fullName" type="text"></label>
+                <label>Age: <input name="age" type="number"></label>
+                <label>Email: <input name="email" type="email"></label>
+                <label>Phone: <input name="phone" type="tel"></label>
+                <input name="registration" type="submit" value="Submit">
+            </aside>
             <article>
                 <!--image-->
                 <img src="images/infants.jpg" alt="infant playing">
@@ -46,7 +55,7 @@
                 <!--program title-->
                 <h3>toddlers</h3>
                 <!--description-->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna duis convallis convallis tellus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <!--time-->
                 <p id="timeLabel">Time: <time datetime="09:00">9:00 am</time>-<time datetime="17:00">5:00 pm</time></p>
             </article>
@@ -56,7 +65,7 @@
                 <!--program title-->
                 <h3>early preschoolers</h3>
                 <!--description-->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <!--time-->
                 <p id="timeLabel">Time: <time datetime="10:00">10:00</time>-<time datetime="18:00">6:00</time></p>
             </article>
@@ -66,18 +75,10 @@
                 <!--program title-->
                 <h3>preschoolers</h3>
                 <!--description-->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                 <!--time-->
                 <p id="timeLabel">Time: <time datetime="10:00">11:00</time>-<time datetime="18:00">5:00</time></p>
             </article>
-            <aside>
-                <h3>Register for a program</h3>
-                <label>Full name: <input name="fullName" type="text"></label>
-                <label>Age: <input name="age" type="number"></label>
-                <label>Email: <input name="email" type="email"></label>
-                <label>Phone: <input name="phone" type="tel"></label>
-                <input name="registration" type="submit" value="Submit">
-            </aside>
         </section>
     </main>
     <footer>
