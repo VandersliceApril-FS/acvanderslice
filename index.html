@@ -7,9 +7,10 @@
 </head>
 <body>
     <header>
-        <!--logo & company name-->
-        <img src="images/logo.png" alt="company logo">
-        <h1>babyland</h1>
+        <span id="logo">
+            <img src="images/logo.png" alt="company logo">
+            <h1>babyland</h1>       
+        </span>
         <!--main navigation-->
         <nav>
             <ul>
@@ -24,8 +25,10 @@
     </header>
     <main>
         <section class="heroHeader">
-            <h2>our programs</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta esse dolor aspernatur expedita ipsa facere, fugit unde quo?</p>
+            <div class="heroHeaderContent">
+                <h2>our programs</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dicta esse dolor aspernatur expedita ipsa facere, fugit unde quo?</p>
+            </div>
         </section>
         <section>
             <article>
@@ -78,41 +81,55 @@
             </aside>
         </section>
     </main>
-    <footer> 
-        <nav id="quickLinks">
-            <h4>quick links</h4>
-            <!--link list: About, testimonials, contact-->
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#callToAction">Contact</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-            <!--social links-->
-            <ul>
-                <li><a href="#">facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">YouTube</a></li>
-                <li><a href="#">Twitter</a></li>
-            </ul>
-        </nav>
+    <footer>
+        <div id="purple">
+            <div id="purpleContent">
+                <nav>
+                    <h4>Quick Links</h4>
+                    <!--link list: About, testimonials, contact-->
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#callToAction">Contact</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                    <!--social links-->
+                    <ul>
+                        <li><a href="#">facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <h4>Get in touch</h4>
+                    <address>
+                        9 Valley St. Brooklyn, NY 11203<br>
+                        <a href="tel:+18003466277">1-800-346-6277</a>
+                        <a href="mailto:info@demonlink.org"></a><br>
+                    </address>
+                </section>
+                <nav>
+                    <h4>For Parents</h4>
+                    <ul>
+                        <li><a href="#gallery">classes</a></li>
+                        <li><a href="#programs">programs</a></li>
+                        <li><a href="#whatWeOffer">activities</a></li>
+                        <li><a href="#blog">tips</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <section>
-            <h4>Get in touch</h4>
-            <address>
-                9 Valley St. Brooklyn, NY 11203<br>
-                <a href="tel:+18003466277">1-800-346-6277</a>
-                <a href="mailto:info@demonlink.org"></a><br>
-            </address>
+            <p>2021 Babyland. All rights reserved. <a href="#privacyPolicy">Privacy Policy</a></p>    
         </section>
-        <nav>
-            <h4>For Parents</h4>
-            <ul>
-                <li><a href="#gallery">classes</a></li>
-                <li><a href="#programs">programs</a></li>
-                <li><a href="#whatWeOffer">activities</a></li>
-                <li><a href="#blog">tips</a></li>
-            </ul>
-        </nav>
     </footer>
+    <nav>
+        <ul>
+            <li>
+                <a href="#top">top</a>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
