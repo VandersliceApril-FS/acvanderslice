@@ -57,8 +57,7 @@ h2, h2 + p, header {
 }
 
 h2, h3 {
-	text-transform: capitalize;
-	font-weight: 700;
+	font-weight: 800;
 }
 
 h2 {
@@ -92,7 +91,8 @@ button {
 }
 
 input[placeholder] {
-	color: black;
+	color: rgba(0, 0, 0, 1);
+	font-size: 1.6rem;
 }
 
 /* Default Structure =================== */
@@ -107,7 +107,7 @@ div.wrapper {
 
 header {
 	max-width: 100%;
-	min-height: 48.1rem;
+	min-height: 52.5rem;
 	background-image: url("../images/sandboxBaby.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -190,11 +190,11 @@ body > nav a {
 
 /* Programs section =================== */
 main section {
-	margin: 9rem 3.6rem;
+	margin: 12.5rem 3.6rem;
 }
 
 
-article, aside {
+article {
 	margin: 3.6rem 5.4rem;
 	display: block;
 	background-color: white;
@@ -203,29 +203,43 @@ article, aside {
 	height: 43.1rem;
 }
 
+aside {
+	margin: 3.6rem 5.4rem;
+	width: 32.6rem;
+	height: 55rem;
+	background-color: white;;
+	padding: 3rem 2rem;
+}
+
 .programInfo, aside {
 	padding: 3.6rem 2.2rem;
-	
 }
 
 aside h3 {
-	text-align: left;
-	padding-bottom: 3rem;
+	padding: 3rem 2rem;
 }
 
 aside input {
 	margin-left: auto;
 	margin-right: auto;
-	width: 100%;
+	margin-top: 1.8rem;
 	display: block;
-	height: 15%;
+	width: 90%;
+	height: 6rem;
 	border-bottom: .05rem solid grey;
 }
 
+aside input[placeholder] {
+	margin-bottom: 0;
+}
+
 aside button {
-	margin-top: 3.6rem;
-	height: 4rem;
-	width: 15rem;
+	margin-top: 5rem;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: 6rem;
+	width: 28rem;
 	background-color: #ffad00;
 	border-radius: 80px;
 }
