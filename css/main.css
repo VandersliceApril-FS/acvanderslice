@@ -88,17 +88,23 @@ input[placeholder] {
 }
 
 /* Default Structure =================== */
-
+div.wrapper {
+	max-width: 100%;
+	min-height: 30rem;
+	background: rgba(0, 0, 0, .3);
+	
+}
 /* Header ============================== */
 
+
 header {
-	min-width: 48rem;
+	max-width: 100%;
 	min-height: 30rem;
-	background-image: url("../images/heroImage.png");
+	background-image: url("../images/sandboxBaby.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: relative;
-	opacity: 0.75;
+	background-position-y: 70%;
 }
 
 #topBar {
