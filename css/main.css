@@ -154,8 +154,13 @@ header {
 
 
 /* Footer ============================== */
+footer {
+	margin: 4rem 0;
+}
+
 #purple {
 	background-color: #3b3d71;
+	height: 28rem;
 	margin: 0;
 	padding: 9rem;
 }
@@ -174,11 +179,14 @@ header {
 	display: inline-block;
 }
 
-footer > section {
+body > section {
+	margin: 2rem 0 4.2rem 0;
 	display: block;
+	height: 3rem;
 	background-color: #f6f6f6;
 	text-align: center;
 }
+
 
 body > nav a {
 	padding: 1.8rem;
