@@ -8,10 +8,8 @@
 <body>
     <header>
         <div id="topBar">
-            
             <img src="images/logo.png" alt="company logo">
             <h1>babyland</h1>       
-            
             <nav>
                 <ul>
                     <li><a href="#top">Home</a></li>
@@ -33,51 +31,43 @@
         <section>
             <aside>
                 <h3>Register for a program</h3>
-                <label>Full name: <input name="fullName" type="text"></label>
-                <label>Age: <input name="age" type="number"></label>
-                <label>Email: <input name="email" type="email"></label>
-                <label>Phone: <input name="phone" type="tel"></label>
-                <input name="registration" type="submit" value="Submit">
+                <input name="fullName" type="text" placeholder="Full Name">
+                <input name="age" type="number" placeholder="Age">
+                <input name="email" type="email" placeholder="E-mail">
+                <input name="phone" type="tel" placeholder="Phone">
+                <button>Submit</button>
             </aside>
             <article>
-                <!--image-->
                 <img src="images/infants.jpg" alt="infant playing">
-                <!--program title-->
-                <h3>infants</h3>
-                <!--description-->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <!--time-->
-                <p id="timeLabel">Time: <time datetime="08:00">8:00</time>-<time datetime="16:00">4:00</time></p>
+                <div class="programInfo">
+                    <h3>infants</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Time: </p><p><time datetime="08:00">8:00 am</time>-<time datetime="16:00">4:00 pm</time></p>
+                </div>
             </article>
             <article>
-                <!--image-->
                 <img src="images/toddlers.jpg" alt="toddler in the garden">
-                <!--program title-->
-                <h3>toddlers</h3>
-                <!--description-->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <!--time-->
-                <p id="timeLabel">Time: <time datetime="09:00">9:00 am</time>-<time datetime="17:00">5:00 pm</time></p>
+                <div class="programInfo">
+                    <h3>toddlers</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Time: </p><p><time datetime="08:00">8:00 am</time>-<time datetime="16:00">4:00 pm</time></p>
+                </div>
             </article>
             <article>
-                <!--image-->
                 <img src="images/earlypreschoolers.jpg" alt="early preschool image">
-                <!--program title-->
-                <h3>early preschoolers</h3>
-                <!--description-->
-                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <!--time-->
-                <p id="timeLabel">Time: <time datetime="10:00">10:00</time>-<time datetime="18:00">6:00</time></p>
+                <div class="programInfo">
+                    <h3>early preschoolers</h3>
+                    <p>Elementum eu facilisis sed odio morbi.</p>
+                    <p>Time: </p><p><time datetime="08:00">8:00 am</time>-<time datetime="16:00">4:00 pm</time></p>
+                </div>
             </article>
             <article>
-                <!--image-->
                 <img src="images/preschoolers.jpg" alt="preschooler working at desk">
-                <!--program title-->
-                <h3>preschoolers</h3>
-                <!--description-->
-                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                <!--time-->
-                <p id="timeLabel">Time: <time datetime="10:00">11:00</time>-<time datetime="18:00">5:00</time></p>
+                <div class="programInfo">
+                    <h3>preschoolers</h3>
+                    <p>Elementum eu facilisis sed odio morbi.</p>
+                    <p>Time: </p><p><time datetime="08:00">8:00 am</time>-<time datetime="16:00">4:00 pm</time></p>
+                </div>
             </article>
         </section>
     </main>
