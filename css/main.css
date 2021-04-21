@@ -4,7 +4,7 @@
 html, body, nav, section, footer, article, 
 h1, h2, h3, h4, p, a, ul, li, dt, dd, address, input, button {
 	border: none;
-	border-radius: none;
+	border-radius: 0;
 	background: none;
 	outline: none;
 	appearance: none;
