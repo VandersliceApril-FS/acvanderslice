@@ -92,7 +92,8 @@ div.wrapper {
 }
 
 main {
-	margin: 12.5rem 3.6rem;
+	margin: 12.5rem auto;
+	max-width: 100rem;
 }
 
 main > section {
