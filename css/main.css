@@ -77,13 +77,17 @@ input[placeholder] {
 }
 
 /* Default Structure =================== */
-body, div.wrapper, main, header, footer > .wrapper {
+body, div.wrapper, header, footer > .wrapper {
 	max-width: 200rem;
 }
 
 body, div.wrapper, header, footer  div.wrapper, #pageTitle {
 	margin: 0 auto;
 }
+
+/* This is the back to top arrow button.
+Margin-left moves it to the far right of the page,
+margin-bottom pulls it away from the very bottom edge */
 body > nav li {
 	content: url(../images/up-arrow.png);
 	height: 5rem;
@@ -99,6 +103,7 @@ div.wrapper {
 
 main {
 	margin: 12.5rem auto;
+	max-width: 90%;
 }
 
 main > section {
