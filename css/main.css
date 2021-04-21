@@ -265,6 +265,7 @@ aside button {
 	margin: 5rem auto 0 auto;
 	display: block;
 	height: 6rem;
+	min-width: 70%;
 	max-width: 28rem;
 	background-color: #ffad00;
 	border-radius: 80px;
