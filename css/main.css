@@ -77,6 +77,13 @@ input[placeholder] {
 }
 
 /* Default Structure =================== */
+body, div.wrapper, main, header, footer > .wrapper {
+	max-width: 200rem;
+}
+
+body, div.wrapper, header, footer  div.wrapper, #pageTitle {
+	margin: 0 auto;
+}
 body > nav li {
 	content: url(../images/up-arrow.png);
 	height: 5rem;
@@ -86,24 +93,23 @@ body > nav li {
 }
 
 div.wrapper {
-	max-width: 100%;
 	min-height: inherit;
 	background: rgba(0, 0, 0, .3);	
 }
 
 main {
 	margin: 12.5rem auto;
-	max-width: 100rem;
 }
 
 main > section {
-	width: 70%;
-	display: inline-block;
+	/* This is intended to keep too many programs from piling up in one row.
+	The inspirational site only has two max in a row. With max-width: 70% there are three. */
+	max-width: 60%;
+	
 }
 
 /* Header ============================== */
 header {
-	max-width: 200rem;
 	min-height: 52.5rem;
 	background-image: url("../images/sandboxBaby.png");
 	background-size: cover;
@@ -145,9 +151,7 @@ header {
 #pageTitle {
 	margin-top: 10.8rem;
 	text-align: center;
-	width: 70%;
-	margin-right: auto;
-	margin-left: auto;
+	max-width: 70%;
 }
 
 #pageTitle p {
@@ -163,7 +167,6 @@ footer {
 footer div.wrapper {
 	background-color: #383A6B;
 	height: 28rem;
-	margin: 0;
 	padding: 9rem 4rem;
 }
 
@@ -201,8 +204,7 @@ footer ul:nth-of-type(1) {
 article, aside {
 	margin: 2rem;
 	background-color: white;
-	width: 35rem;
-	display: inline-block;
+	max-width: 35rem;
 	border-radius: 5px;
 }
 article {
@@ -249,7 +251,7 @@ aside h3 {
 aside input {
 	margin: 1.8rem auto 0 auto;
 	display: block;
-	width:80%;
+	max-width:80%;
 	height: 6rem;
 	border-bottom: .05rem solid grey;
 }
@@ -258,13 +260,10 @@ aside button {
 	margin: 5rem auto 0 auto;
 	display: block;
 	height: 6rem;
-	width: 28rem;
+	max-width: 28rem;
 	background-color: #ffad00;
 	border-radius: 80px;
 }
-
-
-
 
 /*Social Links ===================*/
 a[href="#facebook"] {
