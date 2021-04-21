@@ -88,7 +88,7 @@ body, div.wrapper, header, footer  div.wrapper, #pageTitle {
 /* This is the back to top arrow button.
 Margin-left moves it to the far right of the page,
 margin-bottom pulls it away from the very bottom edge */
-body > nav li {
+body > a {
 	content: url(../images/up-arrow.png);
 	height: 5rem;
 	margin-left: 95%;
