@@ -37,13 +37,7 @@ input[placeholder]::placeholder {
 	color: black;
 }
 
-h1 {
-	font-family: 'Fredoka One', cursive;
-	font-size: 2.8rem;
-}
-
-p, nav li, address {
-	color: gray;
+p, nav li, address, #navContent > a {
 	line-height: 3rem;
 	font-size: 1.6rem;
 }
@@ -52,11 +46,15 @@ nav li, address, h2, h2 + p, header, button, footer {
 	color: white;
 }
 
+p {
+	color: gray;
+}
+
 nav li, address, h2, h2 + p, header, button {
 	font-weight: 700;
 }
 
-h2, .topBar nav li {
+h2, #navContent nav li {
 	text-shadow: 0 1px gray;
 }
 
@@ -84,6 +82,7 @@ body, div.wrapper, header, footer > .wrapper {
 body, div.wrapper, header, footer  div.wrapper, #pageTitle {
 	margin: 0 auto;
 }
+
 
 /* This is the back to top arrow button.
 Margin-left moves it to the far right of the page,
@@ -114,6 +113,8 @@ main > section {
 }
 
 /* Header ============================== */
+
+/* Includes the entire hero image and everything inside */
 header {
 	min-height: 52.5rem;
 	background-image: url("../images/sandboxBaby.png");
@@ -122,32 +123,54 @@ header {
 	background-position-y: 70%;
 }
 
-.topBar {
-	height: 8rem;
-	padding-top: 2rem;
-
+/* background holding the logo, navigation, and more menu */
+.navWrapper {
+	max-height: 8rem;
+	padding-top: 1rem;
+	max-width: 100%;
 }
 
-.topBar nav li, .topBar h1, .topBar img {
+#navContent h1 {
+	content: url("../images/logo.png");
+	max-width: calc(15% - 1rem);
+	margin: 1rem;
+}
+
+/* navigation list and the more menu */
+#navContent li, #navContent a {
+	margin: 1rem;
+}
+
+#navContent nav {
+	max-width: 90%;
+}
+
+#navContent, #navContent ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+
+
+/* #navContent nav li, #navContent h1, #navContent img {
 	display: inline;
 	vertical-align: middle;
 }
 
-.topBar nav {
+#navContent nav {
 	display: inline-block;
-}
+} */
 
-.topBar img {
+#navContent img {
 	padding-left: 2rem;
 	padding-right: .25rem;
-	max-height: 3.2rem;
+	min-height: fit-content;
 }
 
-.topBar nav ul li {
-	margin: 2rem;
-}
 
-.topBar nav li:nth-of-type(6)::before {
+#navContent > a::before {
 	content: url(../images/menu.png);
 	vertical-align: sub;
 	margin-right: 1rem;
