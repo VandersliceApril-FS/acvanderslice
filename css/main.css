@@ -188,28 +188,45 @@ header {
 
 
 /* Footer ============================== */
-footer {
-	margin: 4rem 0;
-}
 
-footer div.wrapper {
+footer {
 	background-color: #383A6B;
-	height: 28rem;
-	padding: 9rem 4rem;
+	height: 36.2rem;
+	padding: 8rem;
 	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
 }
 
 h4 {
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 }
 
-footer nav, footer section  {
-	height: 20rem;
-	margin: 2rem;
-	text-align: justify;
-	vertical-align: top;
+/* Footer Quick Links nav only */
+footer nav:first-of-type ul:nth-of-type(1) {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0 0 3rem 0;
 }
 
+footer ul:nth-of-type(1) li {
+	flex: 12rem;
+}
+
+/* Footer Social links */
+footer nav ul:nth-of-type(2) {
+	display: flex;
+	
+}
+
+footer nav ul:nth-of-type(2) a {
+	vertical-align: text-top;
+}
+
+
+
+/* Copyright */
 body > section p {
 	margin: 2rem 0 4.2rem 0;
 	height: 3rem;
@@ -217,16 +234,6 @@ body > section p {
 	text-align: center;
 }
 
-
-footer nav:nth-of-type(1) li {
-	display: inline-block;
-	min-height: 2rem;
-	margin: 0 1rem 1rem 0;
-}
-
-footer ul:nth-of-type(1) {
-	max-width: 26rem;
-}
 
 /* Programs section =================== */
 article, aside {
@@ -295,23 +302,28 @@ aside button {
 }
 
 /*Social Links ===================*/
+
 a[href="#facebook"] {
 	content: url(../images/fb.png);
+	max-width: 4rem;
 }
 
 a[href="#instagram"] {
 	content: url(../images/instagram.png);
+	max-width: 4rem;
 }
 
 a[href="#youtube"] {
 	content: url(../images/youtube.png);
+	max-width: 4rem;
 }
 
 a[href="#twitter"] {
 	content: url(../images/twitter.png);
+	max-width: 4rem;
 }
 
 footer ul:nth-of-type(2) li {
-	margin: 1rem;
+	margin-right: 1.5rem;
 }
 
