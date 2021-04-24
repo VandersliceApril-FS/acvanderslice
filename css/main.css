@@ -119,8 +119,15 @@ header {
 /* background holding the logo, navigation, and more menu */
 .navWrapper {
 	max-height: 8rem;
-	padding-top: 1rem;
 	max-width: 100%;
+	border: 2px solid yellow;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+#navContent {
+	padding: 1.3rem 0;
 }
 
 #navContent h1 {
@@ -158,7 +165,8 @@ header {
 }
 
 #pageTitle {
-	margin-top: 10.8rem;
+	/* margin-top: 10.8rem; */
+	padding-top: 20rem;
 	text-align: center;
 	max-width: 70%;
 }
