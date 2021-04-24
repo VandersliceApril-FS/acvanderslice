@@ -25,6 +25,11 @@ html {
 	font-size: 62.5%;
 }
 
+h1 {
+	font-size: 3rem;
+	font-family: 'Fredoka One', cursive;
+}
+
 body {
 	background-color: #f5f5f5;
 }
@@ -75,9 +80,6 @@ input[placeholder] {
 }
 
 /* Default Structure =================== */
-#navContent nav {
-	min-width: 60%;
-}
 
 body, div.wrapper, header, footer {
 	max-width: 200rem;
@@ -99,7 +101,7 @@ body > a {
 	display: inline;
 }
 
-div.wrapper:not(nav) {
+div.wrapper:not(#navContent) {
 	min-height: inherit;
 	background: rgba(0, 0, 0, .3);	
 }
@@ -133,30 +135,40 @@ header {
 	border-bottom: 3px solid #ffad00;
 }
 
+
 #navContent {
 	padding: 3rem 0;
 }
 
-#navContent h1 {
-	content: url("../images/logo.png");
-	max-width: calc(15% - 1rem);
-	margin-left: 1.5rem;
+span img {
+	max-height: 5rem;
 }
 
-#navContent > a {
-	margin-right: 1.5rem;
+span h1 {
+	margin-left: 1rem;
 }
 
-#navContent, #navContent ul {
+#navContent, span, #navContent ul {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
+#navContent nav {
+	width: 60%;
+}
+
+
+#navContent > a {
+	margin-right: 1.5rem;
+}
+
+
+
 #navContent img {
 	padding-left: 2rem;
 	padding-right: .25rem;
-	min-height: fit-content;
+	
 }
 
 
