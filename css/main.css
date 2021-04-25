@@ -105,8 +105,8 @@ footer, #navContent, span, #navContent ul, footer nav:first-of-type ul:nth-of-ty
 }
 
 div.wrapper:not(#navContent) {
+	background: rgba(0, 0, 0, .2);
 	min-height: inherit;
-	background: rgba(0, 0, 0, .3);
 }
 
 main {
@@ -118,11 +118,11 @@ main {
 
 /* Includes the entire hero image and everything inside */
 header {
-	min-height: 52.5rem;
 	background-image: url("../images/sandboxBaby.png");
-	background-size: cover;
-	background-repeat: no-repeat;
 	background-position-y: 70%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 52.5rem;
 }
 
 /* background holding the logo, navigation, and more menu */
@@ -134,11 +134,14 @@ header {
 	width: 100%;
 }
 
+#navWrapper:not(#navContent) {
+	background: rgba(0, 0, 0, .6);
+}
+
 /* added an indicator to let user know what page they're on */
 #currentPage {
 	border-bottom: 3px solid #ffad00;
 }
-
 
 #navContent {
 	padding: 3rem 0;
@@ -153,7 +156,6 @@ span h1 {
 }
 
 #navContent, span, #navContent ul {
-	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -162,18 +164,13 @@ span h1 {
 	width: 60%;
 }
 
-
 #navContent > a {
 	margin-right: 1.5rem;
 }
 
-
 #navContent img {
-	padding-left: 2rem;
-	padding-right: .25rem;
-	
+	padding: 0 .25rem 0 2rem;
 }
-
 
 #navContent > a::before {
 	content: url(../images/menu.png);
@@ -222,6 +219,11 @@ footer nav ul:nth-of-type(2) a {
 	vertical-align: text-top;
 }
 
+footer ul:nth-of-type(2) li {
+	margin-right: 1.5rem;
+}
+
+
 address > a {
 	display: block;
 	margin-top: 2rem;
@@ -241,7 +243,12 @@ article, aside {
 	background-color: white;
 	border-radius: 5px;
 }
-
+/* clear fix so the section wouldn't collapse with floated children */
+main section::after, aside::after {
+	content: " ";
+	display: inline-block;
+	width: 100%;
+}
 
 /* articles ================= */
 main section article {
@@ -254,13 +261,6 @@ main section article {
 /* Used a class selector because nth of type wouldn't work if I wanted to select two elements */
 main section article:not(.excludeMarginRight) {
 	margin-right: 4rem;
-}
-
-/* clear fix so the section wouldn't collapse with floated children */
-main section::after {
-	content: " ";
-	display: inline-block;
-	width: 100%;
 }
 
 article img {
@@ -303,12 +303,6 @@ aside {
 	float: right;
 }
 
-aside::after {
-	content: " ";
-	display: inline-block;
-	width: 100%;
-}
-
 aside h3 {
 	padding: 3rem 2rem;
 	text-align: center;
@@ -333,32 +327,25 @@ aside button {
 }
 
 
-
-
-
 /*Social Links ===================*/
+footer nav:first-of-type ul:nth-of-type(2) a {
+	max-width: 4rem;
+}
 
 a[href="#facebook"] {
-	content: url(../images/fb.png);
-	max-width: 4rem;
+	content: url(../images/fb.png);	
 }
 
 a[href="#instagram"] {
 	content: url(../images/instagram.png);
-	max-width: 4rem;
 }
 
 a[href="#youtube"] {
 	content: url(../images/youtube.png);
-	max-width: 4rem;
 }
 
 a[href="#twitter"] {
 	content: url(../images/twitter.png);
-	max-width: 4rem;
 }
 
-footer ul:nth-of-type(2) li {
-	margin-right: 1.5rem;
-}
 
