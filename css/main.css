@@ -3,31 +3,26 @@
 /* CSS Reset =========================== */
 html, body, nav, section, footer, article, 
 h1, h2, h3, h4, p, a, ul, li, dt, dd, address, input, button {
+	appearance: none;
 	border: none;
 	border-radius: 0;
 	background: none;
-	outline: none;
-	appearance: none;
-	margin: 0;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+	box-sizing: border-box;
+	color: inherit;
 	font-size: 100%;
 	font-style: normal;
-	text-decoration: none;
 	font-weight: normal;
-	color: inherit;
-	box-sizing: border-box;
+	list-style: none;
+	margin: 0;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	text-decoration: none;
 }
 
-/* Typography Defaults ================= */
+/* Typography Defaults ================================ */
 html {
 	font-size: 62.5%;
-}
-
-h1 {
-	font-size: 3rem;
-	font-family: 'Fredoka One', cursive;
 }
 
 body {
@@ -36,6 +31,11 @@ body {
 
 body, button, input[placeholder] {
     font-family: 'Comfortaa', sans-serif;
+}
+
+h1 {
+	font-size: 3rem;
+	font-family: 'Fredoka One', cursive;
 }
 
 input[placeholder]::placeholder {
@@ -55,11 +55,11 @@ p {
 	color: #9b9b9b;
 }
 
-nav li, address, h2, h2 + p, header, button {
+nav li, address, h2, h2 + p, header, button, h4 {
 	font-weight: 700;
 }
 
-h2, #navContent nav li {
+h2, #navContent {
 	text-shadow: 1px 2px 3px grey;
 }
 
@@ -79,7 +79,7 @@ input[placeholder] {
 	font-size: 1.6rem;
 }
 
-/* Default Structure =================== */
+/* Default Structure ================================ */
 
 body, div.wrapper, header, footer {
 	max-width: 200rem;
@@ -95,15 +95,18 @@ Margin-left moves it to the far right of the page,
 margin-bottom pulls it away from the very bottom edge */
 body > a {
 	content: url(../images/up-arrow.png);
+	float: right;
 	height: 5rem;
-	margin-left: 95%;
-	margin-bottom: 4px;
-	display: inline;
+	margin: 0 3rem 3rem 0;
+}
+
+footer, #navContent, span, #navContent ul, footer nav:first-of-type ul:nth-of-type(1), footer nav ul:nth-of-type(2) {
+	display: flex;
 }
 
 div.wrapper:not(#navContent) {
 	min-height: inherit;
-	background: rgba(0, 0, 0, .3);	
+	background: rgba(0, 0, 0, .3);
 }
 
 main {
@@ -111,7 +114,7 @@ main {
 	max-width: 90%;
 }
 
-/* Header ============================== */
+/* Header ================================ */
 
 /* Includes the entire hero image and everything inside */
 header {
@@ -123,7 +126,7 @@ header {
 }
 
 /* background holding the logo, navigation, and more menu */
-.navWrapper {
+#navWrapper {
 	max-height: 8rem;
 	max-width: 100%;
 	position: fixed;
@@ -131,6 +134,7 @@ header {
 	width: 100%;
 }
 
+/* added an indicator to let user know what page they're on */
 #currentPage {
 	border-bottom: 3px solid #ffad00;
 }
@@ -164,7 +168,6 @@ span h1 {
 }
 
 
-
 #navContent img {
 	padding-left: 2rem;
 	padding-right: .25rem;
@@ -189,16 +192,15 @@ span h1 {
 }
 
 
-/* Footer ============================== */
+/* Footer ================================ */
 
 footer {
-	min-width: 100%;
+	align-items: flex-start;
 	background-color: #383A6B;
 	height: 36.2rem;
-	padding: 8rem;
-	display: flex;
-	align-items: flex-start;
 	justify-content: space-between;
+	min-width: 100%;
+	padding: 8rem;
 }
 
 h4 {
@@ -207,7 +209,6 @@ h4 {
 
 /* Footer Quick Links nav only */
 footer nav:first-of-type ul:nth-of-type(1) {
-	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin: 0 0 3rem 0;
@@ -217,17 +218,14 @@ footer ul:nth-of-type(1) li {
 	flex: 12rem;
 }
 
-/* Footer Social links */
-footer nav ul:nth-of-type(2) {
-	display: flex;
-	
-}
-
 footer nav ul:nth-of-type(2) a {
 	vertical-align: text-top;
 }
 
-
+address > a {
+	display: block;
+	margin-top: 2rem;
+}
 
 /* Copyright */
 body > section p {
@@ -238,19 +236,17 @@ body > section p {
 }
 
 
-/* Programs section =================== */
+/* Programs section ================================ */
 article, aside {
 	background-color: white;
 	border-radius: 5px;
 }
 
 
-
-/* Program articles */
-
+/* articles ================= */
 main section article {
 	min-height: 43.1rem;
-	width: calc(65%/2 - 4rem);
+	width: calc(68%/2 - 4rem);
 	float: left;
 	margin-bottom: 4rem;
 }
@@ -260,8 +256,7 @@ main section article:not(.excludeMarginRight) {
 	margin-right: 4rem;
 }
 
-
-
+/* clear fix so the section wouldn't collapse with floated children */
 main section::after {
 	content: " ";
 	display: inline-block;
@@ -301,8 +296,7 @@ div p:nth-of-type(1) {
 	padding-bottom: 1.8rem;
 }
 
-/* Registration Aside */
-
+/* Registration ================= */
 aside {
 	min-height: 55rem;
 	min-width: calc(30% - 2rem);
