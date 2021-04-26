@@ -59,7 +59,7 @@ nav li, address, h2, h2 + p, header, button, h4 {
 	font-weight: 700;
 }
 
-h2, #navContent {
+h2, header nav {
 	text-shadow: 1px 2px 3px grey;
 }
 
@@ -243,23 +243,40 @@ article, aside {
 	background-color: white;
 	border-radius: 5px;
 }
+
+#registration {
+	max-width: 30%;
+}
+
+#registration, #programs {
+	display: inline-block;
+}
+
+
 /* clear fix so the section wouldn't collapse with floated children */
-main section::after, aside::after {
+#programs::after, #registration::after {
 	content: " ";
 	display: inline-block;
 	width: 100%;
 }
 
+main section {
+	clear: both;
+}
 /* articles ================= */
-main section article {
+#programs {
+	max-width: 70%;
+}
+
+#programs article {
 	min-height: 43.1rem;
-	width: calc(68%/2 - 4rem);
+	width: calc(100%/2 - 4rem);
 	float: left;
 	margin-bottom: 4rem;
 }
 
 /* Used a class selector because nth of type wouldn't work if I wanted to select two elements */
-main section article:not(.excludeMarginRight) {
+#programs article:not(.excludeMarginRight) {
 	margin-right: 4rem;
 }
 
@@ -297,10 +314,13 @@ div p:nth-of-type(1) {
 }
 
 /* Registration ================= */
-aside {
-	min-height: 55rem;
-	min-width: calc(30% - 2rem);
+#registration {
 	float: right;
+	min-width: calc(30% - 2rem);
+}
+
+aside {
+	height: 58rem;
 }
 
 aside h3 {
