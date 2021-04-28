@@ -81,11 +81,11 @@ input[placeholder] {
 
 /* Default Structure ================================ */
 
-body, div.wrapper, header, footer {
+body, header .wrapper, header, footer {
 	max-width: 200rem;
 }
 
-body, div.wrapper, header, footer, #pageTitle {
+body, header .wrapper, header, footer, #pageTitle {
 	margin: 0 auto;
 }
 
@@ -104,10 +104,12 @@ footer, #navContent, span, #navContent ul, footer nav:first-of-type ul:nth-of-ty
 	display: flex;
 }
 
-div.wrapper:not(#navContent) {
+header .wrapper:not(#navContent) {
 	background: rgba(0, 0, 0, .2);
 	min-height: inherit;
 }
+
+
 
 main {
 	margin: 12.5rem auto;
@@ -191,11 +193,10 @@ span h1 {
 
 /* Footer ================================ */
 
-footer {
-	align-items: flex-start;
+footer div.wrapper  {
+	float: left;
 	background-color: #383A6B;
 	height: 36.2rem;
-	justify-content: space-between;
 	min-width: 100%;
 	padding: 8rem;
 }
@@ -204,24 +205,11 @@ h4 {
 	margin-bottom: 3rem;
 }
 
-/* Footer Quick Links nav only */
+
 footer nav:first-of-type ul:nth-of-type(1) {
-	justify-content: space-between;
-	flex-wrap: wrap;
-	margin: 0 0 3rem 0;
+	float: left;
 }
 
-footer ul:nth-of-type(1) li {
-	flex: 12rem;
-}
-
-footer nav ul:nth-of-type(2) a {
-	vertical-align: text-top;
-}
-
-footer ul:nth-of-type(2) li {
-	margin-right: 1.5rem;
-}
 
 
 address > a {
