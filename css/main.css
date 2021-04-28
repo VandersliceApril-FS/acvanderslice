@@ -81,13 +81,14 @@ input[placeholder] {
 
 /* Default Structure ================================ */
 
-body, header .wrapper, header, footer {
-	max-width: 200rem;
-}
-
-body, header .wrapper, header, footer, #pageTitle {
+body, div.wrapper {
+	width: 100%;
 	margin: 0 auto;
 }
+
+/* body, div.wrapper, header, footer, #pageTitle {
+	margin: 0 auto;
+} */
 
 
 /* This is the back to top arrow button.
@@ -100,9 +101,7 @@ body > a {
 	margin: 0 3rem 3rem 0;
 }
 
-footer, #navContent, span, #navContent ul, footer nav:first-of-type ul:nth-of-type(1), footer nav ul:nth-of-type(2) {
-	display: flex;
-}
+
 
 header .wrapper:not(#navContent) {
 	background: rgba(0, 0, 0, .2);
@@ -194,23 +193,68 @@ span h1 {
 /* Footer ================================ */
 
 footer div.wrapper  {
-	float: left;
 	background-color: #383A6B;
-	height: 36.2rem;
-	min-width: 100%;
-	padding: 8rem;
+	height: 47rem;
+}
+
+
+#mainContent {
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid yellow;
+	padding-top: 12.4rem;
+}
+
+#mainContent::after, .contentBlock nav ul::after {
+	content: "clear fix";
+	display: inline-block;
+	width: 100%;
+}
+
+.contentBlock {
+	width: calc(100%/3 - 3rem);
+	float: left;
+	border: 3px solid pink;
+	
+}
+
+.contentBlock:not(:last-of-type) {
+	margin-right: 3.5rem;
+}
+
+
+.contentBlock nav, .contentBlock section {
+	max-width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid green;
 }
 
 h4 {
 	margin-bottom: 3rem;
 }
 
-
-footer nav:first-of-type ul:nth-of-type(1) {
+/* float the list items and social links so they're aligned horizontally */
+.contentBlock:first-of-type nav ul li  {
 	float: left;
+
 }
 
+footer nav:first-of-type ul:first-of-type {
+	clear: both;
+	width: 31rem;
+}
 
+/* size of Quick Link list items */
+.contentBlock:first-of-type ul:first-of-type li:nth-of-type(1), .contentBlock:first-of-type ul:first-of-type li:nth-of-type(3){
+	width: 18rem;
+}
+
+/* space between social icons */
+footer nav:first-of-type ul:nth-of-type(2) li {
+	margin: 3rem 1.5rem 0 0;
+}
 
 address > a {
 	display: block;
@@ -218,8 +262,8 @@ address > a {
 }
 
 /* Copyright */
-body > section p {
-	margin: 2rem 0 4.2rem 0;
+footer > section p {
+	margin: 2rem auto 4.2rem auto;
 	height: 3rem;
 	background-color: #f6f6f6;
 	text-align: center;
