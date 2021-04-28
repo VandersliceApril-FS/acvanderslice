@@ -202,7 +202,7 @@ footer div.wrapper  {
 	max-width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	border: 2px solid yellow;
+	/* border: 2px solid yellow; */
 	padding-top: 12.4rem;
 }
 
@@ -231,6 +231,10 @@ footer div.wrapper  {
 	border: 3px solid green;
 }
 
+.contentBlock nav ul {
+	max-width: 27rem;
+}
+
 h4 {
 	margin-bottom: 3rem;
 }
@@ -241,12 +245,11 @@ h4 {
 
 }
 
-footer nav:first-of-type ul:first-of-type {
+.contentBlock nav:not(:last-of-type) {
 	clear: both;
-	width: 31rem;
 }
 
-/* size of Quick Link list items */
+/* size of Quick Link list items 1 and 3*/
 .contentBlock:first-of-type ul:first-of-type li:nth-of-type(1), .contentBlock:first-of-type ul:first-of-type li:nth-of-type(3){
 	width: 18rem;
 }
