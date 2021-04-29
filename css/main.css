@@ -59,8 +59,8 @@ nav li, address, h2, h2 + p, header, button, h4 {
 	font-weight: 700;
 }
 
-h2, header nav {
-	text-shadow: 1px 2px 3px grey;
+h2, header nav, #navContent a {
+	text-shadow: 1px 1px 2px grey;
 }
 
 h2 {
@@ -81,20 +81,32 @@ input[placeholder] {
 
 /* Default Structure ================================ */
 
-body, div.wrapper {
+body, div.wrapper, #navWrapper {
 	width: 100%;
 	margin: 0 auto;
 }
 
-/* body, div.wrapper, header, footer, #pageTitle {
+body, div.wrapper, header, footer, #pageTitle {
 	margin: 0 auto;
-} */
+}
+
+
+#mainContent::after, .contentBlock nav ul::after, #navContent, #navContent ul {
+	content: "";
+	display: inline-block;
+	width: inherit;
+}
+
+
+.contentBlock nav:not(:last-of-type) {
+	clear: both;
+}
 
 
 /* This is the back to top arrow button.
 Margin-left moves it to the far right of the page,
 margin-bottom pulls it away from the very bottom edge */
-body > a {
+footer > a {
 	content: url(../images/up-arrow.png);
 	float: right;
 	height: 5rem;
@@ -107,7 +119,6 @@ header .wrapper:not(#navContent) {
 	background: rgba(0, 0, 0, .2);
 	min-height: inherit;
 }
-
 
 
 main {
@@ -128,61 +139,91 @@ header {
 
 /* background holding the logo, navigation, and more menu */
 #navWrapper {
-	max-height: 8rem;
-	max-width: 100%;
+	max-height: 9.5rem;
 	position: fixed;
-	top: 0;
-	width: 100%;
 }
 
 #navWrapper:not(#navContent) {
-	background: rgba(0, 0, 0, .6);
+	background: rgba(0, 0, 0, 0.6);
 }
 
 /* added an indicator to let user know what page they're on */
-#currentPage {
+#currentPage a {
 	border-bottom: 3px solid #ffad00;
 }
 
 #navContent {
-	padding: 3rem 0;
+	/* border: 2px solid red; */
+	overflow: auto;
+}
+
+#navContent span, span img, span h1, #navContent li {
+	float: left;
+}
+
+#navContent nav, #navContent > a, #navContent ul {
+	float: right;
+}
+
+
+
+#navContent > span, #navContent > nav, #navContent a, #navContent ul {
+	max-height: 8rem;
+}
+
+/* -------------------------LOGO */
+
+#navContent span {
+	width: calc(15% - 1.5rem);
+	margin-left: 1.5rem;
 }
 
 span img {
-	max-height: 5rem;
+	max-height: 4rem;
+	padding-bottom: 1rem;
 }
-
 span h1 {
 	margin-left: 1rem;
 }
 
-#navContent, span, #navContent ul {
-	align-items: center;
-	justify-content: space-between;
-}
 
+/* -------------------------NAV LINKS */
 #navContent nav {
-	width: 60%;
+	width: 70%;
 }
 
-#navContent > a {
+#navContent ul {
+	width: 100%;
+}
+
+
+#navContent ul li {
+	width: calc(100%/5 - 2rem);
+}
+
+#navContent li:not(:last-of-type) {
 	margin-right: 1.5rem;
 }
 
-#navContent img {
-	padding: 0 .25rem 0 2rem;
+/* -------------------------MORE HAMBURGER */
+#navContent > a {
+	width: 8%;
+	text-align: right;
+	margin-right: 1.5rem;
 }
 
-#navContent > a::before {
-	content: url(../images/menu.png);
-	vertical-align: sub;
-	margin-right: 1rem;
+
+
+#navContent > span img, #navContent > span h1, #navContent > nav li, #navContent a {
+	padding-top: 3rem;
 }
+
+
 
 #pageTitle {
 	padding-top: 24rem;
 	text-align: center;
-	max-width: 70%;
+	width: 70%;
 }
 
 #pageTitle p {
@@ -206,16 +247,11 @@ footer div.wrapper  {
 	padding-top: 12.4rem;
 }
 
-#mainContent::after, .contentBlock nav ul::after {
-	content: "clear fix";
-	display: inline-block;
-	width: 100%;
-}
 
 .contentBlock {
 	width: calc(100%/3 - 3rem);
 	float: left;
-	border: 3px solid pink;
+	/* border: 3px solid pink; */
 	
 }
 
@@ -228,7 +264,7 @@ footer div.wrapper  {
 	max-width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
-	border: 3px solid green;
+	/* border: 3px solid green; */
 }
 
 .contentBlock nav ul {
@@ -245,9 +281,6 @@ h4 {
 
 }
 
-.contentBlock nav:not(:last-of-type) {
-	clear: both;
-}
 
 /* size of Quick Link list items 1 and 3*/
 .contentBlock:first-of-type ul:first-of-type li:nth-of-type(1), .contentBlock:first-of-type ul:first-of-type li:nth-of-type(3){
@@ -292,7 +325,7 @@ article, aside {
 #programs::after, #registration::after {
 	content: " ";
 	display: inline-block;
-	width: 100%;
+	width: 50%;
 }
 
 main section {
