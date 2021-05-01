@@ -1,0 +1,27 @@
+main {
+    background: lightblue;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+main::after {
+    content: "clear fix!";
+    display: block;
+    clear: both;
+}
+
+#programs {
+    border: 2px solid red;
+    width: 600px;
+    float: left;
+}
+
+#registration {
+    border: 2px solid green;
+    width: 300px;
+    float: right;
+}
+
+article img {
+    max-width: 100%;
+}

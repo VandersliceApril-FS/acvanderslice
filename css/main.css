@@ -90,6 +90,11 @@ body, div.wrapper, header, footer, #pageTitle {
 	margin: 0 auto;
 }
 
+main::after {
+	content: "clear fix!";
+	display: block;
+	clear: both;
+}
 
 #mainContent::after, .contentBlock nav ul::after, #navContent, #navContent ul {
 	content: "";
@@ -102,10 +107,6 @@ body, div.wrapper, header, footer, #pageTitle {
 	clear: both;
 }
 
-
-/* This is the back to top arrow button.
-Margin-left moves it to the far right of the page,
-margin-bottom pulls it away from the very bottom edge */
 footer > a {
 	content: url(../images/up-arrow.png);
 	float: right;
@@ -125,6 +126,8 @@ main {
 	margin: 12.5rem auto;
 	max-width: 90%;
 }
+
+
 
 /* Header ================================ */
 
@@ -307,33 +310,15 @@ footer > section p {
 
 
 /* Programs section ================================ */
-article, aside {
+article, #registration {
 	background-color: white;
 	border-radius: 5px;
 }
 
-#registration {
-	max-width: 30%;
-}
-
-#registration, #programs {
-	display: inline-block;
-}
-
-
-/* clear fix so the section wouldn't collapse with floated children */
-#programs::after, #registration::after {
-	content: " ";
-	display: inline-block;
-	width: 50%;
-}
-
-main section {
-	clear: both;
-}
 /* articles ================= */
 #programs {
-	max-width: 70%;
+	width: 65%;
+	float: left;
 }
 
 #programs article {
@@ -384,19 +369,19 @@ div p:nth-of-type(1) {
 /* Registration ================= */
 #registration {
 	float: right;
-	min-width: calc(30% - 2rem);
+	width: calc(30% - 2rem);
 }
 
-aside {
+#registration {
 	height: 58rem;
 }
 
-aside h3 {
+#registration h3 {
 	padding: 3rem 2rem;
 	text-align: center;
 }
 
-aside input {
+#registration input {
 	margin: 1.8rem auto 0 auto;
 	min-width: 85%;
 	display: block;
@@ -404,7 +389,7 @@ aside input {
 	border-bottom: .05rem solid #c4c4c4;
 }
 
-aside button {
+#registration button {
 	margin: 5rem auto 0 auto;
 	display: block;
 	height: 6rem;
