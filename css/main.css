@@ -90,22 +90,17 @@ body, div.wrapper, header, footer, #pageTitle {
 	margin: 0 auto;
 }
 
+main {
+	margin: 12.5rem auto;
+	max-width: 90%;
+}
+
 main::after {
 	content: "clear fix!";
 	display: block;
 	clear: both;
 }
 
-#mainContent::after, .contentBlock nav ul::after, #navContent, #navContent ul {
-	content: "";
-	display: inline-block;
-	width: inherit;
-}
-
-
-.contentBlock nav:not(:last-of-type) {
-	clear: both;
-}
 
 footer > a {
 	content: url(../images/up-arrow.png);
@@ -114,24 +109,16 @@ footer > a {
 	margin: 0 3rem 3rem 0;
 }
 
-
-
 header .wrapper:not(#navContent) {
 	background: rgba(0, 0, 0, .2);
 	min-height: inherit;
 }
 
 
-main {
-	margin: 12.5rem auto;
-	max-width: 90%;
-}
 
 
 
 /* Header ================================ */
-
-/* Includes the entire hero image and everything inside */
 header {
 	background-image: url("../images/sandboxBaby.png");
 	background-position-y: 70%;
@@ -177,7 +164,7 @@ header {
 /* -------------------------LOGO */
 
 #navContent span {
-	width: calc(15% - 1.5rem);
+	width: calc(20% - 1.5rem);
 	margin-left: 1.5rem;
 }
 
@@ -186,7 +173,7 @@ span img {
 	padding-bottom: 1rem;
 }
 span h1 {
-	margin-left: 1rem;
+	margin-left: .5rem;
 }
 
 
@@ -216,12 +203,9 @@ span h1 {
 }
 
 
-
 #navContent > span img, #navContent > span h1, #navContent > nav li, #navContent a {
 	padding-top: 3rem;
 }
-
-
 
 #pageTitle {
 	padding-top: 24rem;
@@ -241,56 +225,50 @@ footer div.wrapper  {
 	height: 47rem;
 }
 
-
-#mainContent {
-	max-width: 90%;
+footer .wrapper div {
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 	/* border: 2px solid yellow; */
 	padding-top: 12.4rem;
-}
-
-
-.contentBlock {
-	width: calc(100%/3 - 3rem);
-	float: left;
-	/* border: 3px solid pink; */
 	
 }
 
-.contentBlock:not(:last-of-type) {
-	margin-right: 3.5rem;
+footer .wrapper div::after, footer .wrapper div nav ul::after {
+	content: "";
+    display: block;
+    clear: both;
 }
 
+/* footer .wrapper div nav, footer .wrapper div section{
+	border: 3px solid pink;
+} */
 
-.contentBlock nav, .contentBlock section {
-	max-width: fit-content;
-	margin-left: auto;
-	margin-right: auto;
-	/* border: 3px solid green; */
+footer .wrapper div nav, footer .wrapper div section {
+	width: calc(80%/2 - 15%);
+	float: left;
 }
 
-.contentBlock nav ul {
-	max-width: 27rem;
+footer .wrapper div nav:not(:last-of-type), footer .wrapper div section {
+	margin-right: 15%;
+}
+
+footer .wrapper div nav:last-of-type {
+	width: 15%;
 }
 
 h4 {
 	margin-bottom: 3rem;
 }
 
-/* float the list items and social links so they're aligned horizontally */
-.contentBlock:first-of-type nav ul li  {
+footer nav:first-of-type ul li  {
 	float: left;
-
 }
 
-
-/* size of Quick Link list items 1 and 3*/
-.contentBlock:first-of-type ul:first-of-type li:nth-of-type(1), .contentBlock:first-of-type ul:first-of-type li:nth-of-type(3){
+footer nav:first-of-type ul:first-of-type li:nth-of-type(1), nav:first-of-type ul:first-of-type li:nth-of-type(3){
 	width: 18rem;
 }
 
-/* space between social icons */
 footer nav:first-of-type ul:nth-of-type(2) li {
 	margin: 3rem 1.5rem 0 0;
 }
@@ -317,7 +295,7 @@ article, #registration {
 
 /* articles ================= */
 #programs {
-	width: 65%;
+	width: 70%;
 	float: left;
 }
 
@@ -339,16 +317,16 @@ article img {
 	border-top-right-radius: 5px;
 }
 
-.programInfo {
+#programs div {
 	padding: 3.6rem 2.2rem;
 }
 
-.programInfo h3 {
+#programs div h3 {
 	margin-bottom: 1rem;
 }
 
 /* make description and time values gray */
-div.programInfo p:nth-of-type(1), div p:nth-of-type(3) {
+#programs div p:nth-of-type(1), div p:nth-of-type(3) {
 	color: #9b9b9b;
 }
 
