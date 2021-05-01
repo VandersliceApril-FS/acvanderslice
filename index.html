@@ -34,7 +34,7 @@
         </div>
     </header>
     <main>
-        <section id="programs">
+        <section>
             <article>
                 <img src="images/infants.jpg" alt="infant playing">
                 <div>
@@ -47,7 +47,7 @@
                 <img src="images/toddlers.jpg" alt="toddler in the garden">
                 <div>
                     <h3>Toddlers</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Elementum eu facilisis sed odio morbi.</p>
                     <p>Time: </p><p><time datetime="08:00">8:00 am</time>-<time datetime="16:00">4:00 pm</time></p>
                 </div>
             </article>
@@ -55,7 +55,7 @@
                 <img src="images/earlypreschoolers.jpg" alt="early preschool image">
                 <div>
                     <h3>Early Preschoolers</h3>
-                    <p>Elementum eu facilisis sed odio morbi.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p>Time: </p><p><time datetime="08:00">8:00 am</time>-<time datetime="16:00">4:00 pm</time></p>
                 </div>
             </article>
@@ -68,13 +68,24 @@
                 </div>
             </article>
         </section>
-        <section id="registration">
+        <section>
+            <form action="#urlfordata" method="post">
                 <h3>Register for a program</h3>
-                <input name="fullName" type="text" placeholder="Full Name">
-                <input name="age" type="number" placeholder="Age">
-                <input name="email" type="email" placeholder="E-mail">
-                <input name="phone" type="tel" placeholder="Phone">
-                <button>Submit</button>
+                <fieldset>
+                        <label for="fullName">Full Name</label>
+                        <input name="fullName" type="text" placeholder="Full Name" required="required">
+                        <label for="age">Age</label>
+                        <input name="age" type="number" placeholder="Age" required="required">
+                        <label for="email">Email</label>
+                        <input name="email" type="email" placeholder="E-mail" required="required">
+                        <label for="phone">Phone</label>
+                        <input name="phone" type="tel" placeholder="Phone" required="required">
+                </fieldset>
+                <div>
+                    <button type="submit">Submit</button>
+                </div> 
+            </form>
+                               
         </section>
     </main>
     <footer>
@@ -98,7 +109,7 @@
                 <section>
                     <h4>Get in touch</h4>
                     <address>
-                        9 Valley St. Brooklyn, NY 11203<br>
+                        9 Valley St. Brooklyn, NY 11203
                         <a href="tel:+18003466277">1-800-346-6277</a>
                         <a href="mailto:info@demonlink.org">@info@demonlink.org</a>
                     </address>
