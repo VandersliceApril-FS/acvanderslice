@@ -110,7 +110,7 @@ header .wrapper:not(#navContent) {
 	min-height: inherit;
 }
 
-main section h2, footer section h4 {
+main section h2, footer section:nth-of-type(2) h4 {
 	display: none;
 }
 
