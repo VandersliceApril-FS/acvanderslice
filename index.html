@@ -76,12 +76,12 @@
                         <label for="fullName">Full Name</label>
                         <input name="fullName" type="text" placeholder="Full Name" id="fullName" required="required">
                         <label for="age">Age</label>
-                        <input name="age" type="number" placeholder="Age" id="age" required="required">
+                        <input name="age" type="number" min="0" max="7" placeholder="Age" id="age" required="required">
                         <label for="email">Email</label>
                         <input name="email" type="email" placeholder="E-mail" id="email" required="required">
                         <label for="phone">Phone</label>
-                        <input name="phone" type="tel" placeholder="Phone" id="phone" required="required">
-                </fieldset>
+                        <input name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4} " placeholder="Phone" id="phone" required="required">
+                    </fieldset>
                 <div>
                     <button type="submit">Submit</button>
                 </div> 
