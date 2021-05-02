@@ -20,11 +20,7 @@ h1, h2, h3, h4, p, a, ul, li, dt, dd, address, input, button {
 	text-decoration: none;
 }
 
-/* Typography Defaults ================================ */
-html {
-	font-size: 62.5%;
-}
-
+/* Typography Defaults ============================================== */
 body {
 	background-color: #f5f5f5;
 }
@@ -33,13 +29,37 @@ body, button, input[placeholder] {
     font-family: 'Comfortaa', sans-serif;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 h1 {
 	font-size: 3rem;
 	font-family: 'Fredoka One', cursive;
 }
 
-input[placeholder]::placeholder {
+h2, header nav, #navContent a {
+	text-shadow: 1px 1px 2px grey;
+}
+
+h2 {
+	font-size: 4rem;
+}
+
+h3, input[placeholder]::placeholder {
 	color: black;
+}
+
+input[placeholder] {
+	font-size: 1.6rem;
+}
+
+h3, h4, button {
+	font-size: 2.3rem;
+}
+
+p {
+	color: #9b9b9b;
 }
 
 p, nav li, address, #navContent > a {
@@ -51,40 +71,16 @@ nav li, address, h2, h2 + p, header, button, footer {
 	color: white;
 }
 
-p {
-	color: #9b9b9b;
-}
-
 nav li, address, h2, h2 + p, header, button, h4 {
 	font-weight: 700;
-}
-
-h2, header nav, #navContent a {
-	text-shadow: 1px 1px 2px grey;
-}
-
-h2 {
-	font-size: 4rem;
-}
-
-h3 {
-	color: black;
-}
-
-h3, h4, button {
-	font-size: 2.3rem;
 }
 
 nav li {
 	letter-spacing: .15rem;
 }
 
-input[placeholder] {
-	font-size: 1.6rem;
-}
 
-/* Default Structure ================================ */
-
+/* Default Structure ============================================== */
 body, div.wrapper, #navWrapper {
 	width: 100%;
 	margin: 0 auto;
@@ -94,23 +90,19 @@ body, div.wrapper, header, footer, #pageTitle {
 	margin: 0 auto;
 }
 
+h3, h4 {
+	margin-bottom: 2rem;
+}
+
 main {
 	margin: 12.5rem auto;
 	max-width: 90%;
 }
 
 main::after {
-	content: "clear fix!";
+	content: "";
 	display: block;
 	clear: both;
-}
-
-
-footer > a {
-	content: url(../images/up-arrow.png);
-	float: right;
-	height: 5rem;
-	margin: 0 3rem 3rem 0;
 }
 
 header .wrapper:not(#navContent) {
@@ -118,11 +110,11 @@ header .wrapper:not(#navContent) {
 	min-height: inherit;
 }
 
+main section h2, footer section h4 {
+	display: none;
+}
 
-
-
-
-/* Header ================================ */
+/* Header ============================================== */
 header {
 	background-image: url("../images/sandboxBaby.png");
 	background-position-y: 70%;
@@ -131,7 +123,26 @@ header {
 	min-height: 52.5rem;
 }
 
-/* background holding the logo, navigation, and more menu */
+#currentPage a {
+	border-bottom: 3px solid #ffad00;
+}
+
+#navContent {
+	overflow: auto;
+}
+
+#navContent img, #navContent h1, #navContent li, #navContent div {
+	float: left;
+}
+
+#navContent nav, #navContent > a, #navContent ul {
+	float: right;
+}
+
+#navContent img, #navContent h1, #navContent > nav, #navContent a, #navContent ul {
+	max-height: 8rem;
+}
+
 #navWrapper {
 	max-height: 9.5rem;
 	position: fixed;
@@ -141,55 +152,29 @@ header {
 	background: rgba(0, 0, 0, 0.6);
 }
 
-/* added an indicator to let user know what page they're on */
-#currentPage a {
-	border-bottom: 3px solid #ffad00;
+/* LOGO */
+#navContent div {
+	width: calc(22% - 3rem);
+	margin: 0 1.5rem;
 }
 
-#navContent {
-	/* border: 2px solid red; */
-	overflow: auto;
-}
-
-#navContent span, span img, span h1, #navContent li {
-	float: left;
-}
-
-#navContent nav, #navContent > a, #navContent ul {
-	float: right;
-}
-
-
-
-#navContent > span, #navContent > nav, #navContent a, #navContent ul {
-	max-height: 8rem;
-}
-
-/* -------------------------LOGO */
-
-#navContent span {
-	width: calc(20% - 1.5rem);
-	margin-left: 1.5rem;
-}
-
-span img {
-	max-height: 4rem;
+#navContent img {
+	height: 4rem;
 	padding-bottom: 1rem;
 }
-span h1 {
+
+#navContent h1 {
 	margin-left: .5rem;
 }
 
-
-/* -------------------------NAV LINKS */
+/* NAV LINKS */
 #navContent nav {
-	width: 70%;
+	width: 65%;
 }
 
 #navContent ul {
 	width: 100%;
 }
-
 
 #navContent ul li {
 	width: calc(100%/5 - 2rem);
@@ -199,15 +184,14 @@ span h1 {
 	margin-right: 1.5rem;
 }
 
-/* -------------------------MORE HAMBURGER */
+/* MORE MENU */
 #navContent > a {
 	width: 8%;
 	text-align: right;
 	margin-right: 1.5rem;
 }
 
-
-#navContent > span img, #navContent > span h1, #navContent > nav li, #navContent a {
+#navContent > div, #navContent > nav li, #navContent a {
 	padding-top: 3rem;
 }
 
@@ -222,8 +206,7 @@ span h1 {
 }
 
 
-/* Footer ================================ */
-
+/* Footer ============================================== */
 footer div.wrapper  {
 	background-color: #383A6B;
 	height: 47rem;
@@ -233,20 +216,8 @@ footer .wrapper div {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
-	/* border: 2px solid yellow; */
 	padding-top: 12.4rem;
-	
 }
-
-footer .wrapper div::after, footer .wrapper div nav ul::after {
-	content: "";
-    display: block;
-    clear: both;
-}
-
-/* footer .wrapper div nav, footer .wrapper div section{
-	border: 3px solid pink;
-} */
 
 footer .wrapper div nav, footer .wrapper div section {
 	width: calc(80%/2 - 15%);
@@ -259,10 +230,6 @@ footer .wrapper div nav:not(:last-of-type), footer .wrapper div section {
 
 footer .wrapper div nav:last-of-type {
 	width: 15%;
-}
-
-h4 {
-	margin-bottom: 3rem;
 }
 
 footer nav:first-of-type ul li  {
@@ -282,36 +249,69 @@ address > a {
 	margin-top: 2rem;
 }
 
-/* Copyright */
-footer > section p {
+/*SOCIAL LINKS*/
+footer nav:first-of-type ul:nth-of-type(2) a {
+	max-width: 4rem;
+}
+
+a[href="#facebook"] {
+	content: url(../images/fb.png);	
+}
+
+a[href="#instagram"] {
+	content: url(../images/instagram.png);
+}
+
+a[href="#youtube"] {
+	content: url(../images/youtube.png);
+}
+
+a[href="#twitter"] {
+	content: url(../images/twitter.png);
+}
+
+/* COPYRIGHT */
+footer > section p:first-of-type {
 	margin: 2rem auto 4.2rem auto;
 	height: 3rem;
 	background-color: #f6f6f6;
 	text-align: center;
 }
 
+/* TO TOP BUTTON */
+footer > p a {
+	content: url(../images/up-arrow.png);
+	float: right;
+	height: 5rem;
+	margin: 0 3rem 3rem 0;
+}
 
-/* Programs section ================================ */
-article, form {
+footer .wrapper div::after, footer .wrapper div nav ul::after {
+	content: " ";
+    display: block;
+    clear: both;
+}
+
+/* MAIN SECTION ============================================== */
+article, main section:nth-of-type(2) {
 	background-color: white;
 	border-radius: 5px;
 }
 
-/* articles ================= */
+/* programs */
 main section:first-of-type {
 	width: 68%;
 	float: left;
 }
 
 main section article {
-	min-height: 43.1rem;
-	width: calc(100%/2 - 4rem);
+	width: calc(100%/2 - 2rem);
 	float: left;
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 }
 
-main section:first-of-type article:nth-child(1), main section:first-of-type article:nth-child(3) {
-	margin-right: 4rem;
+main section:first-of-type article:nth-of-type(1), main section:first-of-type article:nth-of-type(3) {
+	margin-right: 2rem;
 }
 
 article img {
@@ -324,11 +324,7 @@ main section:first-of-type div {
 	padding: 3.6rem 2.2rem;
 }
 
-main section:first-of-type div h3 {
-	margin-bottom: 1rem;
-}
-
-section > article div p {
+section article div p {
 	color: #9b9b9b;
 }
 
@@ -336,7 +332,6 @@ section > article div p:nth-of-type(2) {
 	color: #e83e8c;
 }
 
-/* Moves the time values inline with time label */
 div p:nth-of-type(2), div p:nth-of-type(3) {
 	display: inline;
 }
@@ -345,8 +340,8 @@ div p:nth-of-type(1) {
 	padding-bottom: 1.8rem;
 }
 
-/* Registration ================= */
-form {
+/* registration */
+main section:nth-of-type(2) {
 	float: right;
 	width: calc(28% - 2rem);
 	padding: 2rem;
@@ -356,9 +351,10 @@ fieldset {
 	border: none;
 }
 
-form h3 {
+main section:nth-of-type(2) h3{
 	padding: 2rem 0 0 0;
 	text-align: center;
+	font-size: 2.3rem;
 }
 
 form label {
@@ -381,27 +377,3 @@ form button {
 	background-color: #ffad00;
 	border-radius: 80px;
 }
-
-
-/*Social Links ===================*/
-footer nav:first-of-type ul:nth-of-type(2) a {
-	max-width: 4rem;
-}
-
-a[href="#facebook"] {
-	content: url(../images/fb.png);	
-}
-
-a[href="#instagram"] {
-	content: url(../images/instagram.png);
-}
-
-a[href="#youtube"] {
-	content: url(../images/youtube.png);
-}
-
-a[href="#twitter"] {
-	content: url(../images/twitter.png);
-}
-
-
